@@ -76,7 +76,7 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 15px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; font-size: 15px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: 
     radial-gradient(1100px circle at 50% -120px, rgba(16, 185, 129, 0.16), transparent 65%),
@@ -159,6 +159,8 @@ input, select, textarea { font-family: inherit; }
 /* ─── Glass Card ─── */
 .glass {
   background: var(--surface);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
   border: 1px solid var(--border);
@@ -176,6 +178,8 @@ input, select, textarea { font-family: inherit; }
 .header {
   position: sticky; top: 0; z-index: 60;
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+
   backdrop-filter: blur(30px) saturate(200%);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
   border-bottom: 1px solid var(--border);
@@ -233,7 +237,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-full); padding: 10px 20px;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   transition: all 0.22s var(--ease); border: none; outline: none;
-  white-space: nowrap; user-select: none;
+  white-space: nowrap; -webkit-user-select: none; user-select: none;
 }
 .btn:active { transform: scale(0.97); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none !important; }
@@ -305,6 +309,8 @@ input, select, textarea { font-family: inherit; }
 }
 .stat-card {
   background: var(--surface);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid var(--border);
@@ -348,6 +354,8 @@ input, select, textarea { font-family: inherit; }
 .tabs {
   display: flex; gap: 4px;
   background: rgba(10, 15, 12, 0.55);
+  -webkit-backdrop-filter: blur(24px);
+
   backdrop-filter: blur(24px);
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 4px; margin-bottom: 20px;
@@ -360,7 +368,7 @@ input, select, textarea { font-family: inherit; }
   color: var(--ink-secondary); font-size: 0.82rem; font-weight: 600;
   cursor: pointer; transition: all 0.22s var(--ease);
   white-space: nowrap; display: flex; align-items: center; gap: 6px;
-  user-select: none;
+  -webkit-user-select: none; user-select: none;
 }
 .tab:hover { color: var(--ink); background: rgba(255,255,255,0.04); }
 .tab.active {
@@ -384,6 +392,8 @@ input, select, textarea { font-family: inherit; }
   padding: 24px;
   border-radius: var(--radius-xl);
   background: var(--surface);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+
   backdrop-filter: blur(28px) saturate(180%);
   -webkit-backdrop-filter: blur(28px) saturate(180%);
   border: 1px solid var(--border-bright);
@@ -670,7 +680,7 @@ input, select, textarea { font-family: inherit; }
   border: 1px solid var(--border);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
+  -webkit-user-select: none; user-select: none;
 }
 
 .telemetry-chip:hover {
@@ -730,6 +740,8 @@ input, select, textarea { font-family: inherit; }
 }
 .card {
   background: var(--surface);
+  -webkit-backdrop-filter: blur(24px);
+
   backdrop-filter: blur(24px);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -760,6 +772,8 @@ input, select, textarea { font-family: inherit; }
 .search-results {
   position: absolute; top: 100%; left: 0; right: 0;
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(24px);
+
   backdrop-filter: blur(24px);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -780,6 +794,8 @@ input, select, textarea { font-family: inherit; }
 .bottom-nav {
   position: fixed; bottom: 0; left: 0; right: 0;
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+
   backdrop-filter: blur(30px) saturate(200%);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
   border-top: 1px solid var(--border);
@@ -813,6 +829,8 @@ input, select, textarea { font-family: inherit; }
 .toast {
   padding: 12px 18px; border-radius: var(--radius-md);
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(20px);
+
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -832,12 +850,16 @@ input, select, textarea { font-family: inherit; }
 .modal-backdrop {
   position: fixed; inset: 0; z-index: 100;
   background: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(6px);
+
   backdrop-filter: blur(6px);
   display: flex; align-items: center; justify-content: center;
   padding: 16px; animation: fadeIn 0.2s ease;
 }
 .modal {
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(30px);
+
   backdrop-filter: blur(30px);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
@@ -1023,6 +1045,8 @@ input, select, textarea { font-family: inherit; }
 .dropdown {
   position: absolute; top: calc(100% + 4px); right: 0;
   background: var(--bg-elevated);
+  -webkit-backdrop-filter: blur(24px);
+
   backdrop-filter: blur(24px);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1325,13 +1349,15 @@ input, select, textarea { font-family: inherit; }
   gap: 10px;
   padding: 8px 18px 8px 10px;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(99, 102, 241, 0.28));
+  -webkit-backdrop-filter: blur(20px);
+
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(52, 211, 153, 0.45);
   border-radius: var(--radius-full);
   box-shadow: 0 10px 30px -4px rgba(16, 185, 129, 0.35), 0 4px 14px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none; user-select: none;
   animation: fabFloat 3.8s ease-in-out infinite;
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
 }
@@ -1424,6 +1450,8 @@ input, select, textarea { font-family: inherit; }
   height: 560px;
   max-height: calc(100vh - 120px);
   background: rgba(11, 18, 14, 0.92);
+  -webkit-backdrop-filter: blur(28px);
+
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(52, 211, 153, 0.35);
@@ -1956,6 +1984,8 @@ input, select, textarea { font-family: inherit; }
   padding: 6px 12px;
   border-radius: var(--radius-full);
   background: rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(8px);
+
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.72rem;
@@ -2826,6 +2856,8 @@ input, select, textarea { font-family: inherit; }
   inset: 0;
   z-index: 1000;
   background: rgba(5, 8, 6, 0.94);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+
   backdrop-filter: blur(28px) saturate(180%);
   display: none;
   flex-direction: column;
