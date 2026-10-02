@@ -3166,19 +3166,51 @@ input, select, textarea { font-family: inherit; }
 }
 
 /* ════════════════════════════════════════════════════════════════
-   🦇 BATMAN (SHARAN) CREATOR SIGNATURE & EASTER EGG
+   🦇 ULTIMATE BATMAN (SHARAN) BRANDING & MASTERPIECE STYLING
    ════════════════════════════════════════════════════════════════ */
 .bat-mini-tag {
   display: inline-block;
   font-size: 0.85rem;
   margin-left: 4px;
   vertical-align: middle;
-  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.6));
+  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.8));
   animation: batWing 3s ease-in-out infinite;
 }
 @keyframes batWing {
   0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.18) rotate(-8deg); }
+  50% { transform: scale(1.22) rotate(-10deg); }
+}
+
+.header-sub-creator {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 1px;
+}
+.sharan-gold-text {
+  color: #fef08a;
+  background: linear-gradient(90deg, #fef08a, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.bat-badge-pill {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(16, 185, 129, 0.25));
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  color: #fde047;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-left: 6px;
+  vertical-align: middle;
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.3);
 }
 
 .ambient.batman-active {
@@ -3189,6 +3221,7 @@ input, select, textarea { font-family: inherit; }
   100% { filter: hue-rotate(130deg) brightness(1.8) drop-shadow(0 0 40px rgba(16, 185, 129, 0.4)); }
 }
 
+/* Footer Credit */
 .app-credit-footer {
   margin-top: 36px;
   padding: 16px 0 10px;
@@ -3199,89 +3232,283 @@ input, select, textarea { font-family: inherit; }
   -webkit-user-select: none;
   user-select: none;
 }
-.credit-pill {
+.epic-credit-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 16px;
+  padding: 8px 18px !important;
   border-radius: var(--radius-full);
-  background: rgba(14, 24, 18, 0.78);
+  background: linear-gradient(135deg, rgba(14, 28, 20, 0.88) 0%, rgba(6, 12, 9, 0.96) 100%) !important;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  border: 1px solid rgba(52, 211, 153, 0.32);
+  border: 1px solid rgba(52, 211, 153, 0.45) !important;
   font-size: 0.76rem;
   color: var(--ink-secondary);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(16, 185, 129, 0.2) !important;
   transition: all 0.25s var(--ease);
 }
-.credit-pill:hover, .credit-pill:active {
+.epic-credit-pill:hover, .epic-credit-pill:active {
   transform: translateY(-2px) scale(1.02);
-  border-color: rgba(52, 211, 153, 0.65);
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  border-color: rgba(52, 211, 153, 0.75) !important;
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.35) !important;
   color: var(--ink);
 }
-.bat-icon {
-  font-size: 1rem;
-  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.8));
+.bat-icon-glow {
+  font-size: 1.15rem;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.9));
+  animation: batWing 3s ease-in-out infinite;
 }
-.bat-name {
-  color: var(--accent-light);
-  font-weight: 700;
+.bat-legend-name {
+  background: linear-gradient(90deg, #ffffff, #6ee7b7 40%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
 }
-.bat-alias {
-  color: #a7f3d0;
-  font-weight: 600;
+.bat-legend-alias {
+  color: #fde047;
+  font-weight: 800;
+  font-size: 0.76rem;
   margin-left: 2px;
 }
-.credit-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-}
-.credit-ver {
-  font-size: 0.66rem;
-  font-weight: 700;
-  color: var(--accent-light);
-  background: rgba(16, 185, 129, 0.16);
-  padding: 1px 7px;
+.bat-edition-tag {
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
   border-radius: 4px;
-  letter-spacing: 0.02em;
 }
 
-.bat-creator-card {
-  background: linear-gradient(135deg, rgba(16, 26, 20, 0.9) 0%, rgba(8, 14, 10, 0.96) 100%) !important;
-  border: 1px solid rgba(52, 211, 153, 0.38) !important;
-  box-shadow: 0 10px 32px -8px rgba(0, 0, 0, 0.75), 0 0 22px rgba(16, 185, 129, 0.14) !important;
-  margin-top: 14px !important;
+/* Founder / Mastermind Card */
+.epic-bat-card {
+  background: linear-gradient(135deg, rgba(16, 32, 24, 0.92) 0%, rgba(8, 14, 10, 0.98) 100%) !important;
+  border: 1px solid rgba(52, 211, 153, 0.45) !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 28px rgba(16, 185, 129, 0.18) !important;
+  margin-top: 16px !important;
+  position: relative;
+  overflow: hidden;
   transition: all 0.25s var(--ease) !important;
 }
-.bat-creator-card:hover {
+.epic-bat-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(52, 211, 153, 0.65) !important;
-  box-shadow: 0 14px 40px -6px rgba(16, 185, 129, 0.28) !important;
+  border-color: rgba(52, 211, 153, 0.75) !important;
+  box-shadow: 0 20px 48px -6px rgba(16, 185, 129, 0.35) !important;
 }
-.bat-avatar-orb {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #0d3827, #064e3b);
-  border: 1.5px solid rgba(52, 211, 153, 0.45);
+.bat-avatar-orb-epic {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: radial-gradient(circle at 30% 30%, #166534, #064e3b 70%, #022c22 100%);
+  border: 1.5px solid rgba(52, 211, 153, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+  font-size: 1.8rem;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.45), inset 0 0 12px rgba(52, 211, 153, 0.3);
   flex-shrink: 0;
+  position: relative;
 }
-.bat-edition-chip {
+.bat-main-glyph {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  animation: batHover 2.5s ease-in-out infinite;
+}
+@keyframes batHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px) scale(1.08); }
+}
+
+.bat-titan-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #ffffff 0%, #34d399 40%, #fbbf24 80%, #60a5fa 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titanShine 4s linear infinite;
+}
+@keyframes titanShine {
+  to { background-position: 200% center; }
+}
+.bat-mythic-chip {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(16, 185, 129, 0.28));
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  color: #fef08a;
+  font-weight: 800;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+}
+.bat-founder-chip {
   background: rgba(16, 185, 129, 0.16);
   border: 1px solid rgba(52, 211, 153, 0.4);
-  color: var(--accent-light);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 8px;
+  color: #a7f3d0;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
   border-radius: var(--radius-full);
+}
+.bat-card-tagline {
+  font-size: 0.76rem;
+  color: var(--ink-secondary);
+  margin-top: 3px;
+}
+.bat-summon-btn {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(245, 158, 11, 0.2)) !important;
+  border: 1px solid rgba(52, 211, 153, 0.5) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.25) !important;
+}
+.bat-summon-btn:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(245, 158, 11, 0.35)) !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.45) !important;
+}
+
+.bat-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+.bat-stat-box {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  text-align: center;
+}
+.bat-stat-num {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #34d399;
+}
+.bat-stat-lbl {
+  font-size: 0.65rem;
+  color: var(--ink-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+/* 🦇 Full Screen Bat-Signal Cinematic Overlay */
+.bat-signal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(2, 6, 4, 0.88);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: overlayFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bat-signal-overlay.fade-out {
+  animation: overlayFadeOut 0.4s ease forwards;
+}
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes overlayFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.bat-signal-modal {
+  background: radial-gradient(circle at 50% 20%, rgba(16, 50, 32, 0.95), rgba(4, 10, 7, 0.98));
+  border: 2px solid rgba(52, 211, 153, 0.6);
+  border-radius: var(--radius-2xl);
+  padding: 36px 28px 30px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.9), 0 0 50px rgba(16, 185, 129, 0.35);
+  animation: modalPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes modalPopIn {
+  from { transform: scale(0.85) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.bat-emblem-giant {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.9));
+  margin-bottom: 12px;
+  animation: batHover 2s ease-in-out infinite;
+}
+.bat-signal-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fde047;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.bat-signal-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #34d399 40%, #fbbf24 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(52, 211, 153, 0.4);
+}
+.bat-signal-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.bat-signal-quote {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  margin: 16px 0 20px;
+  line-height: 1.4;
+}
+.bat-signal-features {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-bottom: 24px;
+}
+.bat-signal-features span {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.bat-dismiss-btn {
+  width: 100%;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.45) !important;
 }
 
 /* ════════════════════════════════════════════════════════════════

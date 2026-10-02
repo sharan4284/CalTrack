@@ -201,10 +201,11 @@ document.getElementById('app').innerHTML = `
   <!-- Main App Screen -->
   <div class="screen" id="screen-app">
     <header class="header">
-      <div class="header-brand" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="CalTrack by Sharan (Batman 🦇)">
+      <div class="header-brand" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="CalTrack • Engineered by Sharan (Batman 🦇)">
         <div class="header-logo">🥗</div>
         <div>
-          <div class="header-title">CalTrack <span class="bat-mini-tag">🦇</span></div>
+          <div class="header-title">CalTrack <span class="bat-badge-pill">🦇 SHARAN</span></div>
+          <div class="header-sub-creator">Architect: <span class="sharan-gold-text">Sharan (Batman)</span> ⚡</div>
         </div>
       </div>
       <div class="header-actions">
@@ -251,11 +252,11 @@ document.getElementById('app').innerHTML = `
 
       <!-- Creator Credit Footer -->
       <footer class="app-credit-footer" onclick="window.ctApp.showBatmanEasterEgg()" title="Tap to summon the Bat-Signal 🦇">
-        <div class="credit-pill">
-          <span class="bat-icon">🦇</span>
-          <span class="credit-text">Crafted by <strong class="bat-name">Sharan</strong> <span class="bat-alias">(Batman)</span></span>
+        <div class="credit-pill epic-credit-pill">
+          <span class="bat-icon-glow">🦇</span>
+          <span class="credit-text">Engineered by <strong class="bat-legend-name">SHARAN</strong> <span class="bat-legend-alias">"THE BATMAN 🦇"</span></span>
           <span class="credit-dot"></span>
-          <span class="credit-ver">Dark Knight Edition</span>
+          <span class="bat-edition-tag">FOUNDER EDITION</span>
         </div>
       </footer>
     </div>
@@ -4444,30 +4445,82 @@ const app = {
         </div>
       </div>
 
-      <!-- Lead Architect & Creator Card -->
-      <div class="card bat-creator-card" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="Click to summon the Bat-Signal 🦇">
-        <div style="display:flex;align-items:center;gap:14px">
-          <div class="bat-avatar-orb">🦇</div>
-          <div style="flex:1">
-            <div style="display:flex;align-items:center;gap:8px">
-              <span class="fw-700" style="font-size:1.05rem;color:var(--ink)">Sharan</span>
-              <span class="badge-chip bat-edition-chip">Batman 🦇</span>
-            </div>
-            <div class="text-xs text-muted" style="margin-top:2px">Lead Architect & Developer • CalTrack Dark Knight Edition</div>
+      <!-- 🦇 The Batman / Sharan Masterpiece Founder Card -->
+      <div class="card epic-bat-card" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="Click to summon the Bat-Signal 🦇">
+        <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:2">
+          <div class="bat-avatar-orb-epic">
+            <span class="bat-main-glyph">🦇</span>
           </div>
-          <button class="btn btn-sm btn-glass" onclick="event.stopPropagation(); window.ctApp.showBatmanEasterEgg()">Summon 🦇</button>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span class="bat-titan-name">SHARAN</span>
+              <span class="badge-chip bat-mythic-chip">🦇 THE BATMAN</span>
+              <span class="badge-chip bat-founder-chip">FOUNDER</span>
+            </div>
+            <div class="bat-card-tagline">Architect & Creator of CalTrack • Peak Fitness System</div>
+          </div>
+          <button class="btn btn-sm bat-summon-btn" onclick="event.stopPropagation(); window.ctApp.showBatmanEasterEgg()">
+            <span>🦇 Summon</span>
+          </button>
+        </div>
+        <div class="bat-stats-row">
+          <div class="bat-stat-box">
+            <div class="bat-stat-num">100%</div>
+            <div class="bat-stat-lbl">Engineered</div>
+          </div>
+          <div class="bat-stat-box">
+            <div class="bat-stat-num">PRO</div>
+            <div class="bat-stat-lbl">CalTrack OS</div>
+          </div>
+          <div class="bat-stat-box">
+            <div class="bat-stat-num">⚡</div>
+            <div class="bat-stat-lbl">Dark Knight</div>
+          </div>
         </div>
       </div>
     `;
   },
 
   showBatmanEasterEgg() {
-    showToast('🦇 "I am vengeance, I am the night..." — Masterminded by Sharan (Batman)!', 'success', 6000);
+    showToast('🦇 "I am vengeance, I am the night..." — Masterminded by SHARAN (The Batman)!', 'success', 6000);
     const ambient = document.querySelector('.ambient');
     if (ambient) {
       ambient.classList.add('batman-active');
-      setTimeout(() => ambient.classList.remove('batman-active'), 5000);
+      setTimeout(() => ambient.classList.remove('batman-active'), 6000);
     }
+
+    // Remove any existing overlay
+    const old = document.getElementById('batSignalOverlay');
+    if (old) old.remove();
+
+    const overlay = document.createElement('div');
+    overlay.id = 'batSignalOverlay';
+    overlay.className = 'bat-signal-overlay';
+    overlay.onclick = () => overlay.remove();
+    overlay.innerHTML = `
+      <div class="bat-signal-modal" onclick="event.stopPropagation()">
+        <div class="bat-emblem-giant">🦇</div>
+        <div class="bat-signal-badge">BATMAN PROTOCOL ACTIVATED</div>
+        <h2 class="bat-signal-name">SHARAN</h2>
+        <div class="bat-signal-title">THE BATMAN • FOUNDER & LEAD ARCHITECT</div>
+        <p class="bat-signal-quote">"It's not who I am underneath, but what I do that defines me."</p>
+        <div class="bat-signal-features">
+          <span>⚡ Peak Human Performance</span>
+          <span>🛡️ Gotham Certified</span>
+          <span>🦾 Master Engineering</span>
+        </div>
+        <button class="btn btn-primary bat-dismiss-btn" onclick="document.getElementById('batSignalOverlay').remove()">
+          Crush Today's Goals 🦇
+        </button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    setTimeout(() => {
+      if (overlay.parentNode) {
+        overlay.classList.add('fade-out');
+        setTimeout(() => overlay.remove(), 400);
+      }
+    }, 4500);
   },
 
   toggleGeminiConnection() {
