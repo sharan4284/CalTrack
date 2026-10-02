@@ -3681,6 +3681,146 @@ input, select, textarea { font-family: inherit; }
     padding: 20px 16px !important;
     max-height: 88dvh !important;
   }
+
+  /* 🦇 Mobile Optimization for Sharan (Batman) Elements */
+  .header-brand {
+    gap: 6px !important;
+    min-width: 0 !important;
+  }
+  .header-title {
+    font-size: 0.98rem !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .bat-badge-pill {
+    font-size: 0.58rem !important;
+    padding: 1px 6px !important;
+    margin-left: 4px !important;
+    letter-spacing: 0.02em !important;
+  }
+  .header-sub-creator {
+    font-size: 0.58rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 140px !important;
+  }
+
+  /* Epic Founder Card mobile layout */
+  .epic-bat-card {
+    padding: 16px 14px !important;
+  }
+  .epic-bat-card > div:first-of-type {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .bat-avatar-orb-epic {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 1.45rem !important;
+    border-radius: 12px !important;
+    flex-shrink: 0 !important;
+  }
+  .bat-titan-name {
+    font-size: 1.15rem !important;
+  }
+  .bat-mythic-chip {
+    font-size: 0.65rem !important;
+    padding: 2px 7px !important;
+  }
+  .bat-founder-chip {
+    font-size: 0.6rem !important;
+    padding: 2px 6px !important;
+  }
+  .bat-card-tagline {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+    margin-top: 2px !important;
+  }
+  .bat-summon-btn {
+    padding: 6px 12px !important;
+    font-size: 0.74rem !important;
+    flex-shrink: 0 !important;
+  }
+  .bat-stats-row {
+    gap: 6px !important;
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+  .bat-stat-box {
+    padding: 6px 4px !important;
+  }
+  .bat-stat-num {
+    font-size: 0.95rem !important;
+  }
+  .bat-stat-lbl {
+    font-size: 0.58rem !important;
+  }
+
+  /* Mobile Footer Pill */
+  .app-credit-footer {
+    margin-top: 24px !important;
+    padding: 12px 6px !important;
+  }
+  .epic-credit-pill {
+    padding: 7px 14px !important;
+    font-size: 0.7rem !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 6px !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    line-height: 1.3 !important;
+  }
+  .bat-legend-name {
+    font-size: 0.78rem !important;
+  }
+  .bat-legend-alias {
+    font-size: 0.72rem !important;
+  }
+
+  /* Mobile Bat-Signal Cinematic Modal */
+  .bat-signal-modal {
+    padding: 26px 18px 22px !important;
+    max-width: calc(100vw - 28px) !important;
+    box-sizing: border-box !important;
+  }
+  .bat-emblem-giant {
+    font-size: 3rem !important;
+    margin-bottom: 8px !important;
+  }
+  .bat-signal-badge {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.08em !important;
+    padding: 2px 8px !important;
+  }
+  .bat-signal-name {
+    font-size: 1.75rem !important;
+  }
+  .bat-signal-title {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.3 !important;
+  }
+  .bat-signal-quote {
+    font-size: 0.8rem !important;
+    margin: 12px 0 16px !important;
+  }
+  .bat-signal-features {
+    font-size: 0.66rem !important;
+    gap: 6px !important;
+    margin-bottom: 18px !important;
+  }
+  .bat-signal-features span {
+    padding: 3px 8px !important;
+  }
+  .bat-dismiss-btn {
+    font-size: 0.88rem !important;
+    padding: 10px 16px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3691,6 +3831,9 @@ input, select, textarea { font-family: inherit; }
   .sync-pill {
     padding: 5px !important;
     border-radius: 50% !important;
+  }
+  .header-sub-creator {
+    display: none !important;
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -3729,10 +3872,14 @@ input, select, textarea { font-family: inherit; }
   .badge-name {
     font-size: 0.78rem !important;
   }
-  .credit-pill {
-    padding: 6px 12px !important;
-    font-size: 0.7rem !important;
-    gap: 6px !important;
+  .epic-credit-pill {
+    padding: 6px 10px !important;
+    font-size: 0.66rem !important;
+    gap: 5px !important;
+  }
+  .bat-titan-name {
+    font-size: 1.05rem !important;
   }
 }
+
 
