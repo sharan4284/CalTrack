@@ -76,7 +76,7 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 15px; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; font-size: 15px; }
 body {
   background: 
     radial-gradient(1100px circle at 50% -120px, rgba(16, 185, 129, 0.16), transparent 65%),
@@ -354,8 +354,6 @@ input, select, textarea { font-family: inherit; }
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 4px; margin-bottom: 20px;
   overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
@@ -1591,8 +1589,6 @@ input, select, textarea { font-family: inherit; }
   gap: 6px;
   padding: 8px 14px;
   overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
 }
@@ -2357,8 +2353,6 @@ input, select, textarea { font-family: inherit; }
   overflow-x: auto;
   padding-bottom: 12px;
   margin-bottom: 16px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 .badge-categories-row::-webkit-scrollbar { display: none; }
 .badge-cat-chip {

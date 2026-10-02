@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>CalTrack — Premium Fitness Platform</title>
   <meta name="description" content="Real-time calorie tracking, workout logging, AI coaching, and fitness analytics. Track meals, macros, workouts, and body progress with a premium dashboard.">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070a08">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f8f5">
+  <script>
+    (function(){
+      var isDark = !window.matchMedia || window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var m = document.createElement('meta');
+      m.name = 'theme-color';
+      m.content = isDark ? '#070a08' : '#f4f8f5';
+      document.head.appendChild(m);
+    })();
+  </script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥗</text></svg>">
   <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="manifest" href="/manifest.json">
