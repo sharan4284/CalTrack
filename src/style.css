@@ -3171,6 +3171,347 @@ input, select, textarea { font-family: inherit; }
   border-color: var(--accent);
 }
 
+/* ════════════════════════════════════════════════════════════════
+   🦇 BATMAN (SHARAN) CREATOR SIGNATURE & EASTER EGG
+   ════════════════════════════════════════════════════════════════ */
+.bat-mini-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-left: 4px;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.6));
+  animation: batWing 3s ease-in-out infinite;
+}
+@keyframes batWing {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.18) rotate(-8deg); }
+}
 
+.ambient.batman-active {
+  animation: batSignalPulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes batSignalPulse {
+  0% { filter: hue-rotate(0deg) brightness(1.2); }
+  100% { filter: hue-rotate(130deg) brightness(1.8) drop-shadow(0 0 40px rgba(16, 185, 129, 0.4)); }
+}
 
+.app-credit-footer {
+  margin-top: 36px;
+  padding: 16px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.credit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(14, 24, 18, 0.78);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(52, 211, 153, 0.32);
+  font-size: 0.76rem;
+  color: var(--ink-secondary);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(16, 185, 129, 0.12);
+  transition: all 0.25s var(--ease);
+}
+.credit-pill:hover, .credit-pill:active {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(52, 211, 153, 0.65);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  color: var(--ink);
+}
+.bat-icon {
+  font-size: 1rem;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.8));
+}
+.bat-name {
+  color: var(--accent-light);
+  font-weight: 700;
+}
+.bat-alias {
+  color: #a7f3d0;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.credit-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+.credit-ver {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  background: rgba(16, 185, 129, 0.16);
+  padding: 1px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.bat-creator-card {
+  background: linear-gradient(135deg, rgba(16, 26, 20, 0.9) 0%, rgba(8, 14, 10, 0.96) 100%) !important;
+  border: 1px solid rgba(52, 211, 153, 0.38) !important;
+  box-shadow: 0 10px 32px -8px rgba(0, 0, 0, 0.75), 0 0 22px rgba(16, 185, 129, 0.14) !important;
+  margin-top: 14px !important;
+  transition: all 0.25s var(--ease) !important;
+}
+.bat-creator-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(52, 211, 153, 0.65) !important;
+  box-shadow: 0 14px 40px -6px rgba(16, 185, 129, 0.28) !important;
+}
+.bat-avatar-orb {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0d3827, #064e3b);
+  border: 1.5px solid rgba(52, 211, 153, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+  flex-shrink: 0;
+}
+.bat-edition-chip {
+  background: rgba(16, 185, 129, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: var(--accent-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   📱 COMPREHENSIVE FLUID MOBILE ALIGNMENT SYSTEM
+   Ensures seamless layout reflow, centered cards, zero overflow,
+   comfortable touch targets, and iOS/Android safe area support.
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Page wrapper spacing & safe area */
+  .page-wrap {
+    padding: 14px 12px calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px) + 24px) !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Header mobile optimization */
+  .header {
+    padding: 0 12px !important;
+    height: 56px !important;
+    gap: 8px !important;
+  }
+  .header-brand {
+    gap: 8px !important;
+  }
+  .header-logo {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1.1rem !important;
+  }
+  .header-title {
+    font-size: 1.05rem !important;
+  }
+  .header-actions {
+    gap: 6px !important;
+  }
+  .sync-pill {
+    padding: 3px 8px !important;
+    font-size: 0.65rem !important;
+  }
+  .sync-pill #syncPillText {
+    max-width: 85px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+  .user-chip {
+    padding: 3px 8px 3px 3px !important;
+    gap: 6px !important;
+  }
+  .user-avatar {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.75rem !important;
+  }
+  .user-name {
+    font-size: 0.75rem !important;
+    max-width: 70px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  /* Unified Hero Card mobile center alignment */
+  .unified-hero-card {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 18px 14px !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+  }
+  .rings-hero-wrap {
+    margin: 0 auto !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+  .rings-svg-wrap {
+    width: 160px !important;
+    height: 160px !important;
+    margin: 0 auto !important;
+  }
+  .calorie-rem-badge {
+    margin: 0 auto !important;
+  }
+  .macro-meters-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+  .telemetry-badges-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  /* Bottom Navigation - Fluid flex distribution across all mobile screen widths */
+  .bottom-nav {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 4px 6px max(6px, env(safe-area-inset-bottom)) !important;
+    height: calc(58px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .nav-item {
+    flex: 1 1 0px !important;
+    min-width: 0 !important;
+    padding: 4px 2px !important;
+    gap: 2px !important;
+  }
+  .nav-item span:not(.nav-icon):not(.nav-camera-orb) {
+    font-size: 0.62rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    letter-spacing: -0.01em !important;
+  }
+  .nav-camera-orb {
+    width: 36px !important;
+    height: 36px !important;
+    margin-top: -6px !important;
+  }
+
+  /* Cards, grids, and containers */
+  .card {
+    padding: 16px 14px !important;
+    border-radius: var(--radius-lg) !important;
+    margin-bottom: 14px !important;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Center AI Meal Photo Studio on mobile */
+  .center-meal-studio {
+    padding: 18px 14px !important;
+    margin-bottom: 18px !important;
+  }
+  .center-meal-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .center-meal-title-group {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  /* Live workout engine mobile controls */
+  .live-inputs-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .live-stepper-wrap {
+    gap: 6px !important;
+  }
+  .live-stepper-wrap .btn-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  /* Modal bottom-sheet styling on mobile */
+  .modal-backdrop {
+    padding: 10px !important;
+    align-items: flex-end !important;
+  }
+  .modal {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 20px 20px 12px 12px !important;
+    padding: 20px 16px !important;
+    max-height: 88dvh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ultra-compact phones (iPhone SE, 360px Androids) */
+  .sync-pill #syncPillText {
+    display: none !important;
+  }
+  .sync-pill {
+    padding: 5px !important;
+    border-radius: 50% !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .stat-card {
+    padding: 10px 8px !important;
+  }
+  .stat-value {
+    font-size: 1.15rem !important;
+  }
+  .macro-meter-item {
+    padding: 6px 6px !important;
+  }
+  .macro-name, .macro-val {
+    font-size: 0.66rem !important;
+  }
+  .telemetry-chip-val {
+    font-size: 0.95rem !important;
+  }
+  .telemetry-chip-lbl {
+    font-size: 0.6rem !important;
+  }
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  .badge-card {
+    padding: 10px 6px !important;
+  }
+  .badge-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 1.35rem !important;
+  }
+  .badge-name {
+    font-size: 0.78rem !important;
+  }
+  .credit-pill {
+    padding: 6px 12px !important;
+    font-size: 0.7rem !important;
+    gap: 6px !important;
+  }
+}
 

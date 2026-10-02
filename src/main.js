@@ -201,10 +201,10 @@ document.getElementById('app').innerHTML = `
   <!-- Main App Screen -->
   <div class="screen" id="screen-app">
     <header class="header">
-      <div class="header-brand">
+      <div class="header-brand" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="CalTrack by Sharan (Batman 🦇)">
         <div class="header-logo">🥗</div>
         <div>
-          <div class="header-title">CalTrack</div>
+          <div class="header-title">CalTrack <span class="bat-mini-tag">🦇</span></div>
         </div>
       </div>
       <div class="header-actions">
@@ -222,6 +222,7 @@ document.getElementById('app').innerHTML = `
             <button class="dropdown-item" onclick="window.ctApp.switchTab('achievements')">🏆 Badges & Streaks</button>
             <button class="dropdown-item" onclick="window.ctApp.toggleCoachMode()">👥 <span id="coachToggleText">Switch to Coach Mode</span></button>
             <button class="dropdown-item" onclick="window.ctApp.exportData()">📁 Export All Data (CSV)</button>
+            <button class="dropdown-item" onclick="window.ctApp.showBatmanEasterEgg()">🦇 Built by Sharan (Batman)</button>
             <div class="dropdown-divider"></div>
             <button class="dropdown-item" onclick="window.ctApp.handleLogout()">🚪 Sign Out</button>
             <button class="dropdown-item" style="color:var(--danger)" onclick="window.ctApp.handleDeleteAccount()">🗑 Delete Account</button>
@@ -247,6 +248,16 @@ document.getElementById('app').innerHTML = `
 
       <!-- Tab Content -->
       <div id="tabContent"></div>
+
+      <!-- Creator Credit Footer -->
+      <footer class="app-credit-footer" onclick="window.ctApp.showBatmanEasterEgg()" title="Tap to summon the Bat-Signal 🦇">
+        <div class="credit-pill">
+          <span class="bat-icon">🦇</span>
+          <span class="credit-text">Crafted by <strong class="bat-name">Sharan</strong> <span class="bat-alias">(Batman)</span></span>
+          <span class="credit-dot"></span>
+          <span class="credit-ver">Dark Knight Edition</span>
+        </div>
+      </footer>
     </div>
 
     <!-- Mobile Bottom Nav (Clean 5 items) -->
@@ -4432,7 +4443,31 @@ const app = {
           <button class="btn btn-danger btn-block" onclick="window.ctApp.handleDeleteAccount()">🗑 Delete Account & Data</button>
         </div>
       </div>
+
+      <!-- Lead Architect & Creator Card -->
+      <div class="card bat-creator-card" onclick="window.ctApp.showBatmanEasterEgg()" style="cursor:pointer" title="Click to summon the Bat-Signal 🦇">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div class="bat-avatar-orb">🦇</div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span class="fw-700" style="font-size:1.05rem;color:var(--ink)">Sharan</span>
+              <span class="badge-chip bat-edition-chip">Batman 🦇</span>
+            </div>
+            <div class="text-xs text-muted" style="margin-top:2px">Lead Architect & Developer • CalTrack Dark Knight Edition</div>
+          </div>
+          <button class="btn btn-sm btn-glass" onclick="event.stopPropagation(); window.ctApp.showBatmanEasterEgg()">Summon 🦇</button>
+        </div>
+      </div>
     `;
+  },
+
+  showBatmanEasterEgg() {
+    showToast('🦇 "I am vengeance, I am the night..." — Masterminded by Sharan (Batman)!', 'success', 6000);
+    const ambient = document.querySelector('.ambient');
+    if (ambient) {
+      ambient.classList.add('batman-active');
+      setTimeout(() => ambient.classList.remove('batman-active'), 5000);
+    }
   },
 
   toggleGeminiConnection() {
