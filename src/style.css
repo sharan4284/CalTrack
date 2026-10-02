@@ -76,7 +76,7 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 15px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html { scroll-behavior: smooth; font-size: 15px; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body {
   background: 
     radial-gradient(1100px circle at 50% -120px, rgba(16, 185, 129, 0.16), transparent 65%),
@@ -107,8 +107,8 @@ body {
   background-size: 36px 36px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
                     linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
 }
 [data-theme="light"] .bg-mesh-grid {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
@@ -160,9 +160,7 @@ input, select, textarea { font-family: inherit; }
 .glass {
   background: var(--surface);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
-
   backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
@@ -179,9 +177,7 @@ input, select, textarea { font-family: inherit; }
   position: sticky; top: 0; z-index: 60;
   background: var(--bg-elevated);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
-
   backdrop-filter: blur(30px) saturate(200%);
-  -webkit-backdrop-filter: blur(30px) saturate(200%);
   border-bottom: 1px solid var(--border);
   padding: 0 20px; height: var(--header-h);
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -310,9 +306,7 @@ input, select, textarea { font-family: inherit; }
 .stat-card {
   background: var(--surface);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-
   backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg); padding: 16px 14px;
   text-align: center; position: relative;
@@ -359,7 +353,9 @@ input, select, textarea { font-family: inherit; }
   backdrop-filter: blur(24px);
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 4px; margin-bottom: 20px;
-  overflow-x: auto; scrollbar-width: none;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
@@ -393,9 +389,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-xl);
   background: var(--surface);
   -webkit-backdrop-filter: blur(28px) saturate(180%);
-
   backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
   border: 1px solid var(--border-bright);
   box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.45);
   margin-bottom: 20px;
@@ -795,9 +789,7 @@ input, select, textarea { font-family: inherit; }
   position: fixed; bottom: 0; left: 0; right: 0;
   background: var(--bg-elevated);
   -webkit-backdrop-filter: blur(30px) saturate(200%);
-
   backdrop-filter: blur(30px) saturate(200%);
-  -webkit-backdrop-filter: blur(30px) saturate(200%);
   border-top: 1px solid var(--border);
   display: flex; justify-content: space-around;
   padding: 6px 8px; padding-bottom: max(6px, env(safe-area-inset-bottom));
@@ -1350,9 +1342,7 @@ input, select, textarea { font-family: inherit; }
   padding: 8px 18px 8px 10px;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(99, 102, 241, 0.28));
   -webkit-backdrop-filter: blur(20px);
-
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(52, 211, 153, 0.45);
   border-radius: var(--radius-full);
   box-shadow: 0 10px 30px -4px rgba(16, 185, 129, 0.35), 0 4px 14px rgba(0, 0, 0, 0.5);
@@ -1423,12 +1413,14 @@ input, select, textarea { font-family: inherit; }
   color: var(--ink);
   background: linear-gradient(135deg, #f0fdf4 40%, #a7f3d0 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 [data-theme="light"] .fab-text {
   background: linear-gradient(135deg, #065f46 40%, #047857 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1451,9 +1443,7 @@ input, select, textarea { font-family: inherit; }
   max-height: calc(100vh - 120px);
   background: rgba(11, 18, 14, 0.92);
   -webkit-backdrop-filter: blur(28px);
-
   backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(52, 211, 153, 0.35);
   border-radius: var(--radius-xl);
   box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 0 35px rgba(16, 185, 129, 0.15);
@@ -1601,6 +1591,7 @@ input, select, textarea { font-family: inherit; }
   gap: 6px;
   padding: 8px 14px;
   overflow-x: auto;
+  -ms-overflow-style: none;
   scrollbar-width: none;
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
@@ -2366,7 +2357,7 @@ input, select, textarea { font-family: inherit; }
   overflow-x: auto;
   padding-bottom: 12px;
   margin-bottom: 16px;
-  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .badge-categories-row::-webkit-scrollbar { display: none; }
